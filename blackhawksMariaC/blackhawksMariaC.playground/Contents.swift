@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 //Create the Blackhawks Roster in a Dictionary
 
@@ -53,4 +54,17 @@ let blackhawks: [Int: [String: Any]] = [
 
 // Convert the date into an actual date object
 
+for (number, playerInfo) in blackhawks {
+    if let playerInfo = playerInfo as? [String: Any],
+       let dob = playerInfo["dob"] as? String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        
+        if let dobDate = dateFormatter.date(from: dob){
+            print (dobDate)
+        }
+        
+    }
+}
 
