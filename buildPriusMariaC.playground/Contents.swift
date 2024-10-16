@@ -51,3 +51,14 @@ var car2 = Prius(model: "Limited", interiorColor: "Gradient Black", exteriorColo
 car1.displayCarBuild()
 print("\n")
 car2.displayCarBuild()
+print("\n")
+
+
+// Mod the car
+
+car1.interiorColor = "Super Pink"
+car1.displayCarBuild()
+
+print("\n")
+car2.packages.append("Limited Premium Package")
+car2.displayCarBuild()
